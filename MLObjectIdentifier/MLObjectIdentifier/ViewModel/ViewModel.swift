@@ -23,12 +23,15 @@ class ViewModel {
         }
     }
     
-    // se carga el array con la lista de nombre de las fotos
-  
+    // se carga el array con la lista de nombre de las fotos 
+    
     func loadData(){
-        for i in 0...119 {
-            let name = "testImage\(i)"
-            dataArray.append(ListModel(name: name))
+        DispatchQueue.global(qos: .userInitiated).async {
+            for i in 0...119 {
+                let name = "testImage\(i)"
+                self.dataArray.append(ListModel(name: name))
+            }
         }
+        
     }    
 }

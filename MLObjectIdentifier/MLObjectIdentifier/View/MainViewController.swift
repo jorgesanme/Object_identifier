@@ -15,7 +15,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         title = "main"
         
-        imageTest.image = UIImage(named:  "testImage1")
+        imageTest.image = UIImage(systemName: "person")
     }
 
     

@@ -13,10 +13,8 @@
 		FD4C1AC2261C557D00902DB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD4C1AC0261C557D00902DB0 /* Main.storyboard */; };
 		FD4C1AC4261C558100902DB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD4C1AC3261C558100902DB0 /* Assets.xcassets */; };
 		FD4C1AC7261C558100902DB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD4C1AC5261C558100902DB0 /* LaunchScreen.storyboard */; };
-		FD4C1AD3261C575300902DB0 /* YOLOv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = FD4C1AD2261C575300902DB0 /* YOLOv3.mlmodel */; };
 		FD4C1AD6261C57A300902DB0 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4C1AD5261C57A300902DB0 /* ViewModel.swift */; };
 		FD4C1ADA261C681200902DB0 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4C1AD9261C681200902DB0 /* ListModel.swift */; };
-		FD4C1ADF261C6E6300902DB0 /* CatalogueCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4C1ADD261C6E6300902DB0 /* CatalogueCollectionViewController.swift */; };
 		FD4C1AE5261C758200902DB0 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4C1AE4261C758200902DB0 /* CollectionViewCell.swift */; };
 		FD4C1AEF261C820800902DB0 /* CataloCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4C1AEE261C820800902DB0 /* CataloCollectionViewController.swift */; };
 /* End PBXBuildFile section */
@@ -30,10 +28,8 @@
 		FD4C1AC3261C558100902DB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD4C1AC6261C558100902DB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD4C1AC8261C558100902DB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FD4C1AD2261C575300902DB0 /* YOLOv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = YOLOv3.mlmodel; path = ../../../YOLOv3.mlmodel; sourceTree = "<group>"; };
 		FD4C1AD5261C57A300902DB0 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		FD4C1AD9261C681200902DB0 /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
-		FD4C1ADD261C6E6300902DB0 /* CatalogueCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueCollectionViewController.swift; sourceTree = "<group>"; };
 		FD4C1AE4261C758200902DB0 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		FD4C1AEE261C820800902DB0 /* CataloCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CataloCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,7 +80,6 @@
 		FD4C1ACF261C570600902DB0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				FD4C1AD2261C575300902DB0 /* YOLOv3.mlmodel */,
 				FD4C1AD9261C681200902DB0 /* ListModel.swift */,
 			);
 			path = Model;
@@ -94,7 +89,6 @@
 			isa = PBXGroup;
 			children = (
 				FD4C1ABE261C557D00902DB0 /* MainViewController.swift */,
-				FD4C1ADD261C6E6300902DB0 /* CatalogueCollectionViewController.swift */,
 				FD4C1AE4261C758200902DB0 /* CollectionViewCell.swift */,
 				FD4C1AEE261C820800902DB0 /* CataloCollectionViewController.swift */,
 			);
@@ -184,9 +178,7 @@
 				FD4C1AE5261C758200902DB0 /* CollectionViewCell.swift in Sources */,
 				FD4C1ABB261C557D00902DB0 /* AppDelegate.swift in Sources */,
 				FD4C1AEF261C820800902DB0 /* CataloCollectionViewController.swift in Sources */,
-				FD4C1ADF261C6E6300902DB0 /* CatalogueCollectionViewController.swift in Sources */,
 				FD4C1ADA261C681200902DB0 /* ListModel.swift in Sources */,
-				FD4C1AD3261C575300902DB0 /* YOLOv3.mlmodel in Sources */,
 				FD4C1ABD261C557D00902DB0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -33,60 +33,66 @@ class CataloCollectionViewController: UIViewController{
 extension CataloCollectionViewController: UICollectionViewDataSource{
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return viewModel.dataArray.count
+        return 1 //viewModel.dataArray.count
     }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.dataArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? CollectionViewCell else {fatalError()}
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? CollectionViewCell else {
+            return UICollectionViewCell()
+            
+        }
         
         if(indexPath.row < viewModel.dataArray.count){
-            cell.configureView(name: viewModel.dataArray[indexPath.row].name)
+            cell.contentView.backgroundColor = .blue
+            print(viewModel.dataArray[indexPath.row].name)            
+            cell.configureView(name: viewModel.dataArray[indexPath.row].name)        
         }
-        return cell ?? UICollectionViewCell()
+        return cell
     }
-    
     
 }
 
 extension CataloCollectionViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: UIScreen.main.bounds.width, height: 128.0)
+        return CGSize(width: 128.0, height: 128.0) //UIScreen.main.bounds.width
     }
 }
 
-extension CataloCollectionViewController: UICollectionViewDelegate{
-    
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-    
-    }
-    */
-}
+// MARK: UICollectionViewDelegate
+//extension CataloCollectionViewController: UICollectionViewDelegate{
+//
+//
+//
+//    /*
+//    // Uncomment this method to specify if the specified item should be highlighted during tracking
+//    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
+//        return true
+//    }
+//    */
+//
+//    /*
+//    // Uncomment this method to specify if the specified item should be selected
+//    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+//        return true
+//    }
+//    */
+//
+//    /*
+//    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
+//    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
+//        return false
+//    }
+//
+//    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
+//        return false
+//    }
+//
+//    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
+//
+//    }
+//    */
+//}
