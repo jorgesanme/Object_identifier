@@ -27,8 +27,8 @@ class ViewModel {
     
     func loadData(){
         DispatchQueue.global(qos: .userInitiated).async {
-            for i in 0...119 {
-                let name = "testImage\(i)"
+            for indice in 0...119 {
+                let name = "testImage\(indice)"
                 self.dataArray.append(ListModel(name: name))
             }
         }

@@ -95,7 +95,7 @@
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="YOM-Nf-j1E" customClass="CollectionViewCell" customModule="MLObjectIdentifier" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="CBF-V3-wlM">
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="CBF-V3-wlM" customClass="CollectionViewCell" customModule="MLObjectIdentifier" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -150,30 +150,62 @@
             </objects>
             <point key="canvasLocation" x="2810" y="125"/>
         </scene>
-        <!--View Controller-->
+        <!--Search Collection View Controller-->
         <scene sceneID="pr8-Xv-T1d">
             <objects>
-                <viewController id="kbn-jK-bUW" sceneMemberID="viewController">
+                <viewController id="kbn-jK-bUW" customClass="SearchCollectionViewController" customModule="MLObjectIdentifier" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZLv-AM-IXP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BUSCAR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jq4-Gu-Kb1">
-                                <rect key="frame" x="147" y="369" width="121" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vPL-mW-QST">
+                                <rect key="frame" x="8" y="96" width="398" height="758"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="8" minimumInteritemSpacing="8" id="UkB-eT-dNG">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="rae-pg-Di6" customClass="SearchCollectionViewCell" customModule="MLObjectIdentifier" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="xYf-kI-LZx">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="so0-zp-hKn">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="so0-zp-hKn" firstAttribute="leading" secondItem="xYf-kI-LZx" secondAttribute="leading" id="FmO-px-Okt"/>
+                                                <constraint firstAttribute="bottom" secondItem="so0-zp-hKn" secondAttribute="bottom" id="Iay-oI-Ld1"/>
+                                                <constraint firstAttribute="trailing" secondItem="so0-zp-hKn" secondAttribute="trailing" id="Vga-ku-9Zb"/>
+                                                <constraint firstItem="so0-zp-hKn" firstAttribute="top" secondItem="xYf-kI-LZx" secondAttribute="top" id="WFZ-Ig-7hL"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="image" destination="so0-zp-hKn" id="KBb-5P-We2"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Uca-dS-4Ll"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Jq4-Gu-Kb1" firstAttribute="leading" secondItem="Uca-dS-4Ll" secondAttribute="leading" constant="147" id="AAY-lL-jRj"/>
-                            <constraint firstItem="Jq4-Gu-Kb1" firstAttribute="top" secondItem="Uca-dS-4Ll" secondAttribute="top" constant="281" id="V9n-pz-6h3"/>
-                            <constraint firstItem="Uca-dS-4Ll" firstAttribute="trailing" secondItem="Jq4-Gu-Kb1" secondAttribute="trailing" constant="146" id="ex8-W5-dpv"/>
+                            <constraint firstItem="Uca-dS-4Ll" firstAttribute="bottom" secondItem="vPL-mW-QST" secondAttribute="bottom" constant="8" id="8Pp-AR-6ua"/>
+                            <constraint firstItem="Uca-dS-4Ll" firstAttribute="trailing" secondItem="vPL-mW-QST" secondAttribute="trailing" constant="8" id="D0o-Cv-Q1l"/>
+                            <constraint firstItem="vPL-mW-QST" firstAttribute="leading" secondItem="Uca-dS-4Ll" secondAttribute="leading" constant="8" id="YtS-oj-t8a"/>
+                            <constraint firstItem="vPL-mW-QST" firstAttribute="top" secondItem="Uca-dS-4Ll" secondAttribute="top" constant="8" id="rN8-Hc-qvy"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hCG-q1-0iC"/>
+                    <connections>
+                        <outlet property="collectionView" destination="vPL-mW-QST" id="7RK-Jg-YaU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LW6-cr-sXE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -11,7 +11,7 @@ class CollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var image: UIImageView!
     
-    
+        
     func configureView(name: String) {
         if let preImage = UIImage(named: name)  {
             image?.image = preImage
