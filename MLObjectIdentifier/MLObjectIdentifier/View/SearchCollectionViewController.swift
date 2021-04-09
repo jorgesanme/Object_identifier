@@ -7,7 +7,8 @@
 
 import UIKit
 
-private let reuseIdentifier = "searchCell"
+//private let reuseIdentifier = "searchCell"
+private let reuseIdentifier = "SearchCollectionViewCell"
 
 class SearchCollectionViewController: UIViewController{
     
@@ -26,7 +27,8 @@ class SearchCollectionViewController: UIViewController{
         viewModel.loadData()
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(SearchCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        collectionView.register(UINib(nibName: reuseIdentifier, bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
+//        collectionView.register(SearchCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
     }
     
 }
@@ -57,6 +59,6 @@ extension SearchCollectionViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 152, height: 152) //UIScreen.main.bounds.width
+        return CGSize(width: 128, height: 128) //UIScreen.main.bounds.width
     }
 }

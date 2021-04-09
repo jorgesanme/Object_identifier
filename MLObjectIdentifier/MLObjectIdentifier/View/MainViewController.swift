@@ -14,8 +14,6 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "main"
-        
-        imageTest.image = UIImage(systemName: "person")
     }
 
     

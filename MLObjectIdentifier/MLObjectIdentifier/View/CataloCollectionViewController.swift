@@ -7,7 +7,7 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
+private let reuseIdentifier = "SearchCollectionViewCell"
 
 class CataloCollectionViewController: UIViewController{
     
@@ -19,8 +19,8 @@ class CataloCollectionViewController: UIViewController{
         super.viewDidLoad()
         title = "catalogue"
         configureView()
-        collectionView.register(CollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-        
+        collectionView.register(UINib(nibName: reuseIdentifier, bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
+       
     }
     func configureView(){
         viewModel.loadData()
@@ -38,14 +38,15 @@ extension CataloCollectionViewController: UICollectionViewDataSource{
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier,
-                                                            for: indexPath) as? CollectionViewCell else {
-            return UICollectionViewCell()
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? SearchCollectionViewCell else {
+            fatalError("Expected '\(SearchCollectionViewCell.self)' type for reusedIdenfier but not found")
         }
+       
         if(indexPath.row < viewModel.dataArray.count){
             cell.contentView.backgroundColor = .blue
             print(viewModel.dataArray[indexPath.row].name)            
-            cell.configureView(name: viewModel.dataArray[indexPath.row].name)        
+            cell.configureView(name: viewModel.dataArray[indexPath.row].name)
+            
         }
         return cell
     }
@@ -55,47 +56,6 @@ extension CataloCollectionViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 160.0, height: 160.0) //UIScreen.main.bounds.width
+        return CGSize(width: 128.0, height: 128.0)
     }
 }
-
-
-
-
-
-
-
-// MARK: UICollectionViewDelegate
-//extension CataloCollectionViewController: UICollectionViewDelegate{
-//
-//
-//
-//    /*
-//    // Uncomment this method to specify if the specified item should be highlighted during tracking
-//    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-//        return true
-//    }
-//    */
-//
-//    /*
-//    // Uncomment this method to specify if the specified item should be selected
-//    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-//        return true
-//    }
-//    */
-//
-//    /*
-//    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-//    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-//        return false
-//    }
-//
-//    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-//        return false
-//    }
-//
-//    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-//
-//    }
-//    */
-//}
