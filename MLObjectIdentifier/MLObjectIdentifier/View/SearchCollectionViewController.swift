@@ -7,7 +7,7 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
+private let reuseIdentifier = "searchCell"
 
 class SearchCollectionViewController: UIViewController{
     
@@ -26,6 +26,7 @@ class SearchCollectionViewController: UIViewController{
         viewModel.loadData()
         collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.register(SearchCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
     }
     
 }
@@ -40,11 +41,11 @@ extension SearchCollectionViewController: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier,
-                                                            for: indexPath) as? CollectionViewCell else {
+                                                            for: indexPath) as? SearchCollectionViewCell else {
             return UICollectionViewCell()
         }
         if(indexPath.row < viewModel.dataArray.count){
-            cell.contentView.backgroundColor = .blue
+            cell.contentView.backgroundColor = .orange
             print(viewModel.dataArray[indexPath.row].name)
             cell.configureView(name: viewModel.dataArray[indexPath.row].name)
         }
