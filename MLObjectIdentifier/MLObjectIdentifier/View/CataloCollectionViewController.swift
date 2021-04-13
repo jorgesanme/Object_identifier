@@ -56,6 +56,6 @@ extension CataloCollectionViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 128.0, height: 128.0)
+        return CGSize(width: 400.0, height: 400.0)
     }
 }

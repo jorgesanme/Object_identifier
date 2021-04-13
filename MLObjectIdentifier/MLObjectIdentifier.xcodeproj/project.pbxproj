@@ -15,7 +15,6 @@
 		FD4C1AC7261C558100902DB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD4C1AC5261C558100902DB0 /* LaunchScreen.storyboard */; };
 		FD4C1AD6261C57A300902DB0 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4C1AD5261C57A300902DB0 /* ViewModel.swift */; };
 		FD4C1ADA261C681200902DB0 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4C1AD9261C681200902DB0 /* ListModel.swift */; };
-		FD4C1AE5261C758200902DB0 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4C1AE4261C758200902DB0 /* CollectionViewCell.swift */; };
 		FD4C1AEF261C820800902DB0 /* CataloCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4C1AEE261C820800902DB0 /* CataloCollectionViewController.swift */; };
 		FD55CFA826205AB400E61DE9 /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD55CFA626205AB400E61DE9 /* SearchCollectionViewCell.swift */; };
 		FD55CFA926205AB400E61DE9 /* SearchCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD55CFA726205AB400E61DE9 /* SearchCollectionViewCell.xib */; };
@@ -33,7 +32,6 @@
 		FD4C1AC8261C558100902DB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD4C1AD5261C57A300902DB0 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		FD4C1AD9261C681200902DB0 /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
-		FD4C1AE4261C758200902DB0 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		FD4C1AEE261C820800902DB0 /* CataloCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CataloCollectionViewController.swift; sourceTree = "<group>"; };
 		FD55CFA626205AB400E61DE9 /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
 		FD55CFA726205AB400E61DE9 /* SearchCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -94,9 +92,8 @@
 		FD4C1AD0261C571200902DB0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FD55CFB0262065A300E61DE9 /* New Group */,
+				FD55CFB0262065A300E61DE9 /* CustonXIB */,
 				FD4C1ABE261C557D00902DB0 /* MainViewController.swift */,
-				FD4C1AE4261C758200902DB0 /* CollectionViewCell.swift */,
 				FD4C1AEE261C820800902DB0 /* CataloCollectionViewController.swift */,
 				FD56047C261F286C00DA3E92 /* SearchCollectionViewController.swift */,
 			);
@@ -111,13 +108,13 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		FD55CFB0262065A300E61DE9 /* New Group */ = {
+		FD55CFB0262065A300E61DE9 /* CustonXIB */ = {
 			isa = PBXGroup;
 			children = (
 				FD55CFA626205AB400E61DE9 /* SearchCollectionViewCell.swift */,
 				FD55CFA726205AB400E61DE9 /* SearchCollectionViewCell.xib */,
 			);
-			path = "New Group";
+			path = CustonXIB;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,7 +192,6 @@
 				FD4C1AD6261C57A300902DB0 /* ViewModel.swift in Sources */,
 				FD4C1ABF261C557D00902DB0 /* MainViewController.swift in Sources */,
 				FD55CFA826205AB400E61DE9 /* SearchCollectionViewCell.swift in Sources */,
-				FD4C1AE5261C758200902DB0 /* CollectionViewCell.swift in Sources */,
 				FD4C1ABB261C557D00902DB0 /* AppDelegate.swift in Sources */,
 				FD4C1AEF261C820800902DB0 /* CataloCollectionViewController.swift in Sources */,
 				FD4C1ADA261C681200902DB0 /* ListModel.swift in Sources */,
